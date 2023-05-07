@@ -11,40 +11,42 @@ int main()
     X = B-A;
     Y=C-B;
 
-    if(B-A < 0 && C-B >= B-A){
-        printf(":)\n");
-    }
-    else if(B-A > 0 && C-B <= B-A)
+    if(B-A < 0)
     {
-        printf(":(\n");
-    }
-    else if(B-A > 0 && C-A > 0){
-        if(C-B < B-A){
+        if(C-B <= B-A)
+        {
             printf(":(\n");
         }
-        else if(C-B > B-A){
+        else
+        {
             printf(":)\n");
         }
 
     }
-    else if(B-A < 0 && C-B < 0){
-        if(C-B < B-A){
+    else if(B-A > 0)
+    {
+        if(C-B >= B-A)
+        {
             printf(":)\n");
         }
-        else{
+        else
+        {
             printf(":(\n");
-        }
+        };
     }
-    else if(B-A == 0){
-        if(C-B > 0){
+    else if(B-A == 0)
+    {
+        if(C-B > 0)
+        {
             printf(":)\n");
         }
-        else{
+        else
+        {
             printf(":(\n");
         }
+
     }
+
 
     return 0;
 }
-
-

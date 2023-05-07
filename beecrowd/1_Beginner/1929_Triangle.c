@@ -8,25 +8,26 @@ int main()
     scanf("%d %d %d %d", &A, &B, &C, &D);
 
 
-    if(A < (B + C) || A < (C + D) || A < (B + D))
+    if(A < (B + C) && B < (A + C) && C < (A + B))
     {
-        printf("Y\n");
-        printf("1\n");
+        printf("S\n");
+//        printf("1\n");
     }
-    else if(B < (A + C) || B < (C + D) || B < (A + D))
+    else if(A < (B + D) && B < (A + D) && D < (A + B))
     {
-        printf("Y\n");
-        printf("2\n");
+        printf("S\n");
+//        printf("2\n");
+
     }
-    else if(C < (A + B) || C < (A + D) || C < (C + D))
+    else if(A < (C + D) && C < (A + D) && D < (A + C))
     {
-        printf("Y\n");
-        printf("3\n");
+        printf("S\n");
+//        printf("3\n");
     }
-    else if(D < (A + B) || D < (A + C) || D < (B + C))
+    else if(B < (C + D) && C < (B + D) && D < (B + C))
     {
-        printf("Y\n");
-        printf("4\n");
+        printf("S\n");
+//        printf("4\n");
     }
 
     else{

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1683028925 source:i:\projects\c_program\samsung_job_preparation\beecrowd\5_mathematics\new\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<iomanip>
+
