@@ -15,8 +15,11 @@ int FindCost(int Start, int End, int G)
     for(int i=1; i<=P; i++)
     {
             sum=sum+ cost;
+//            printf("%d ",cost);
             if(i%2 != 0 || (G-cost)+1 < Start || (G+cost)-1>End) cost++; //inserting as pair
     }
+//    printf("\n");
+
     return sum;
 }
 
@@ -70,13 +73,21 @@ int main()
 
                 if(TotalCost<min) min=TotalCost;
 
+                printf("Possible way : %d\n", c);
+                printf("G1: Starting,Ending - %d,%d; Gate Position - %d; cost - %d\n",G1Start, G1End, G1, G1Cost);
+                printf("G2: Starting,Ending - %d,%d; Gate Position - %d; Cost - %d\n",G2Start, G2End, G2, G2Cost);
+                printf("G3: Starting,Ending - %d,%d; Gate Position - %d; cost - %d\n",G3Start, G3End, G3, G3Cost);
+                printf("Total Cost: %d\n", TotalCost);
                 c++;
                 TotalCombination++;
+                printf("\n");
             }
         }
 
     }
 
-    printf("%d\n", min);
+    printf("\nMinimum Cost : %d\n", min);
+    printf("Total Possible combination: %d\n", TotalCombination);
+
     return 0;
 }
