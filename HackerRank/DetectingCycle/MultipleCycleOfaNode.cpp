@@ -22,7 +22,7 @@ void initTemp(){
 void cmpTempCycle(){
     tempSum=0;
     for(int i=1; i<11; i++){
-//       cout << DP[i] << " ";
+       cout << DP[i] << " ";
        if(1==DP[i]){
             tempSum+=i;
        }
@@ -32,7 +32,7 @@ void cmpTempCycle(){
             cycle[i]=DP[i];
         }
     }
-//    cout << endl;
+    cout << endl;
 }
 
 void initCycle(){
@@ -77,17 +77,24 @@ bool detectCycle(int node, int edge){
 }
 
 void DFS(int node){
-//    cout << "Node: " << node << endl;
+    cout << "Node: " << node << endl;
     for(auto edge:mat[node]){
         bool loop = detectCycle(node, edge);
+        if(loop){
+            cout << "Cycle found for " << edge << endl;
+//            cmpTempCycle();
+        }
+        else cout << "Cycle not found for " << edge << endl;
     }
+    cout << endl;
+
     return;
 }
 
 int main(){
     freopen("input.txt","r",stdin);
     readCase();
-//    printCase(1);
+    printCase(1);
 
 
 
@@ -96,7 +103,7 @@ int main(){
         DP[i]=1;
         DFS(i);
     }
-//    cout << endl;
+    cout << endl;
     for(int i=1; i<11; i++) if(cycle[i]==1) printf("%d ",i);
     cout << endl;
     return 0;
