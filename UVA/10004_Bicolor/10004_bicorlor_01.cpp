@@ -64,7 +64,7 @@ bool solve(int edge, int c)
 
 int main()
 {
-//    freopen("input.txt","r",stdin);
+    freopen("input.txt","r",stdin);
 //    freopen("output.txt","w",stdout);
 //    printCase();
 //    cout<< "Start:" << endl;
